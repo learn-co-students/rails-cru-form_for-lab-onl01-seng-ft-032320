@@ -9,7 +9,7 @@ class SongsController < ApplicationController
   end 
   
   def create 
-    @song = Song.create(song_params(:name, :artist_id, :genre_id))
+    @song = Song.create(song_params)
     redirect_to song_path(@song)
   end 
    
@@ -22,7 +22,7 @@ class SongsController < ApplicationController
   end 
   
   def update 
-    @song = Song.update(song_params(:name, :artist_id, :genre_id))
+    @song = Song.update(song_params)
     redirect_to song_path(@song)
   end 
   
